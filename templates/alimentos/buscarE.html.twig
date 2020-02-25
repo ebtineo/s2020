@@ -1,0 +1,35 @@
+{% extends 'alimentos/layout.html.twig' %}
+
+{% block contenido %}
+
+  <h1>BUSCAR ALIMENTO POR ENERGIA: </h1>
+  <form name="formBusqueda" action="{{ path('app_alimentos_buscarPorEnergia')}}" method="POST">
+    <table>
+      <tr>
+        <td>energía del alimento:</td>
+        <td><input type="text" name="energia" value="">(introducir únicamente números positivos)</td>
+        <td><input type="submit" value="buscar"></td>
+      </tr>
+    </table>
+  </form>
+
+  {% if resultado %}
+    <table>
+      <tr>
+        <th>alimento (por 100g)</th>
+        <th>energía (Kcal)</th>
+        <th>grasa (g)</th>
+      </tr>
+
+      {% for alimento in resultado %}
+        <tr>
+          <td>{{alimento.nombre}}</td>
+          <td>{{alimento.energia}}</td>
+          <td>{{alimento.grasatotal}}</td>
+          <td><a href="{{ path('app_alimentos_edit', {'id': alimento.id})}}">Editar</a></td>
+        </tr>
+      {% endfor %}
+    </table>
+  {% endif %}
+
+{% endblock %}

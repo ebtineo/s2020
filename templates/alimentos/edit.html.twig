@@ -1,0 +1,45 @@
+{% extends 'alimentos/layout.html.twig' %}
+
+{% block contenido %}
+
+  <h1>EDITAR/ELIMINAR ALIMENTO: {{alimento.nombre}}</h1>
+  <form name="formEdit" action="{{ path('app_alimentos_edit')}}" method="POST">
+    <table>
+      <tr>
+        <td>ID</td>
+        <td><input type="hidden" name="id" value="{{alimento.id}}" readonly/></td>
+      </tr>
+      <tr>
+        <td>Nombre</td>
+        <td><input type="text" name="nombre" value="{{alimento.nombre}}" /></td>
+      </tr>
+      <tr>
+        <td>Energía (Kcal)</td>
+        <td><input type="number" name="energia" value="{{alimento.energia}}" /></td>
+      </tr>
+      <tr>
+        <td>Proteina (g)</td>
+        <td><input type="number" name="proteina" value="{{alimento.proteina}}" /></td>
+      </tr>
+      <tr>            
+        <td>H. de carbono (g)</td>
+        <td><input type="number" name="hc" value="{{alimento.hidratocarbono}}" /></td>
+      </tr>
+      <tr>
+        <td>Fibra (g)</td>
+        <td><input type="number" name="fibra" value="{{alimento.fibra}}" /></td>
+      </tr>
+      <tr>
+        <td>Grasa total (g)</td>
+        <td><input type="number" name="grasa" value="{{alimento.grasatotal}}" /></td>
+      </tr>
+    </table>
+    <br>
+    <input type="submit" name="editar" value="Editar">
+    <input type="submit" name="borrar" value="Borrar">
+  </form>
+  {% if mensaje is defined %}
+    <p style="color: red;">{{ mensaje }}</p>
+  {% endif %}
+
+{% endblock %}

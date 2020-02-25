@@ -1,0 +1,17 @@
+{% extends 'alimentos/layout.html.twig' %}
+
+{% block contenido %}
+
+  <form method="POST" name="login" action="{{ path('app_alimentos_login')}}">
+    <h1>INICIAR SESIÓN: </h1>
+    <input type="text" name="usuario" placeholder="Usuario">
+    <input type="password" name="pass" placeholder="Contraseña">
+    <input type="submit" name="enviar">
+  </form>
+  
+  
+  {% if mensaje is defined %}
+    <p style="color: red;">{{ mensaje }}</p>
+  {% endif %}
+
+{% endblock %}

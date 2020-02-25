@@ -1,0 +1,20 @@
+{% extends 'alimentos/layout.html.twig' %}
+
+{% block contenido %}
+
+  <h1>MOSTRA INFO EN WIKIPEDIA:</h1>
+  <table>
+    <tr>
+      <th>nombre de alimento (por 100g)</th>
+      <th>Enlace externo a wiki</th>
+    </tr>
+
+    {% for alimento in alimentos %}
+      <tr>
+        <td><a href="{{ path('app_alimentos_ver', {'id': alimento.id})}}">{{alimento.nombre}}</a></td>
+        <td><a href="http://es.wikipedia.org/wiki/{{alimento.nombre}}" class="cajamodal"> + info </a></td>
+      </tr>
+    {% endfor %}
+  </table>
+
+{% endblock %}

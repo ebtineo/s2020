@@ -1,0 +1,37 @@
+{% extends 'alimentos/layout.html.twig' %}
+
+{% block contenido %}
+
+  <h1>DETALLES DEL ALIMENTO: </h1>
+  <h1>{{alimento.nombre}} | <a href="http://es.wikipedia.org/wiki/{{alimento.nombre}}" target="_blank"> + info </a> </h1>
+    <table border="1">
+      <tr>
+        <td>Energía</td>
+        <td>{{alimento.energia}}</td>
+        <td> Kcal </td>
+      </tr>
+      <tr>
+        <td>Proteina</td>
+        <td>{{alimento.proteina}}</td>
+        <td> g </td>
+      </tr>
+      <tr>
+        <td>Hidratos de Carbono</td>
+        <td>{{alimento.hidratocarbono}}</td>
+        <td> g </td>
+      </tr>
+      <tr>
+        <td>Fibra</td>
+        <td>{{alimento.fibra}}</td>
+        <td> g </td>
+      </tr>
+      <tr>
+        <td>Grasa total</td>
+        <td>{{alimento.grasatotal}}</td>
+        <td> g </td>
+      </tr>
+    </table>
+  </br>
+  * Los valores se refieren a 100 g del alimento
+
+{% endblock %}

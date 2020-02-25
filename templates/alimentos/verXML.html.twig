@@ -1,0 +1,16 @@
+{% extends 'alimentos/layout.html.twig' %}
+
+{% block contenido %}
+  <?xml version="1.0" encoding="UTF-8"?>
+  <xmp>
+    <alimento>
+      <nombre>{{alimento.nombre}}</nombre>
+      <energia>{{alimento.energia}}</energia>
+      <proteinas>{{alimento.proteina}}</proteinas>
+      <hc>{{alimento.hidratocarbono}}</hc>
+      <fibra>{{alimento.fibra}}</fibra>
+      <grasa>{{alimento.grasatotal}}</grasa>
+    </alimento>
+  </xmp>
+  <a href="xml/{{alimento.nombre}}.xml" download="{{alimento.nombre}}XML.xml" target="_blank">Descargar XML</a>
+{% endblock %}

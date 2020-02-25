@@ -1,3 +1,75 @@
 #index:
 #    path: /
 #    controller: App\Controller\DefaultController::index
+
+# nombre de ruta
+app_alimentos_inicio:
+  # ruta
+    path: /inicio
+    # llamada a la acción en el controlador, en este caso, llamada al inicio
+    controller: App\Controller\AlimentosController::inicio
+
+# VER ALIMENTOS
+app_alimentos_listar:
+    path: /listar
+    controller: App\Controller\AlimentosController::listar
+
+# INSERTAR ALIMENTO
+app_alimentos_insertar:
+    path: /insertar
+    controller: App\Controller\AlimentosController::insertar
+
+# BUSCAR POR NOMBRE
+app_alimentos_buscarPorNombre:
+    path: /buscarPorNombre
+    controller: App\Controller\AlimentosController::buscarPorNombre
+
+# BUSCAR POR ENERGIA
+app_alimentos_buscarPorEnergia:
+    path: /buscarPorEnergia
+    controller: App\Controller\AlimentosController::buscarPorEnergia
+
+# BUSCAR POR ENERGIA
+app_alimentos_buscarAlimentosCombinada:
+    path: /buscarAlimentosCombinada
+    controller: App\Controller\AlimentosController::buscarAlimentosCombinada
+
+# WIKI
+app_alimentos_wiki:
+    path: /wiki
+    controller: App\Controller\AlimentosController::wiki
+
+# VER
+app_alimentos_ver:
+    path: /ver
+    controller: App\Controller\AlimentosController::ver
+
+# VER ARCHIVO XML
+app_alimentos_verXML:
+    path: /verXML
+    controller: App\Controller\AlimentosController::verXML
+
+# DESCARGAR ARCHIVO XML
+app_alimentos_descargarXML:
+    path: /descargarXML
+    controller: App\Controller\AlimentosController::descargarXML
+
+# ARCHIVO PDF
+app_alimentos_descargarPDF:
+    path: /descargarPDF
+    controller: App\Controller\AlimentosController::descargarPDF
+
+# EDITAR ALIMENTO
+app_alimentos_edit:
+    path: /edit
+    controller: App\Controller\AlimentosController::edit
+
+# LOGIN
+app_alimentos_login:
+    path: /login
+    controller: App\Controller\AlimentosController::login
+
+# CERRAR SESIÓN
+app_alimentos_cerrarSesion:
+    path: /cerrarSesion
+    controller: App\Controller\AlimentosController::cerrarSesion
